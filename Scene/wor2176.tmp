@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://crkhpy1f8ndy8"]
+[gd_scene load_steps=10 format=3 uid="uid://crkhpy1f8ndy8"]
 
 [ext_resource type="Texture2D" uid="uid://b12rxf66sumfh" path="res://Assets/ice_wall.png" id="1_1l77t"]
 [ext_resource type="Texture2D" uid="uid://cybqx2xqogicc" path="res://Assets/Nebula Blue.png" id="3_g2v1l"]
@@ -6,11 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://b0x3vi155h2dg" path="res://Assets/Stars Small_2.png" id="4_74k1a"]
 [ext_resource type="Script" path="res://Scripts/player_movement.gd" id="4_waey0"]
 [ext_resource type="Texture2D" uid="uid://dfd12chf5ve8c" path="res://Assets/cyber_wall.png" id="6_l2p5j"]
-[ext_resource type="Script" path="res://Scene/Space_Ship.gd" id="7_ep23r"]
 [ext_resource type="Texture2D" uid="uid://cysh40pkbsm43" path="res://Assets/space_ship.png" id="7_u88ku"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t7lmk"]
-size = Vector2(91, 177.5)
+size = Vector2(72, 41)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l6c3h"]
 size = Vector2(387, 1505)
@@ -32,24 +31,8 @@ centered = false
 texture = ExtResource("4_74k1a")
 centered = false
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="ParallaxBackground"]
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground/ParallaxBackground"]
-position = Vector2(-21, -4068)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxBackground/ParallaxLayer"]
-position = Vector2(4, -9)
-texture = ExtResource("3_g2v1l")
-centered = false
-
-[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxBackground/ParallaxLayer"]
-texture = ExtResource("4_74k1a")
-centered = false
-
 [node name="Floating_wall" type="StaticBody2D" parent="."]
 position = Vector2(1957, 1925)
-collision_layer = 4
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Floating_wall"]
@@ -63,61 +46,9 @@ position = Vector2(-0.664612, 3.70066)
 scale = Vector2(0.998787, 0.985239)
 polygon = PackedVector2Array(189, 32, 152, 31, 91, 38, -1, 39, -94, 42, -261, 16, -378, -8, -312, 62, -255, 118, -205, 124, -201, 143, -106, 178, -64, 172, -55, 183, 5, 191, 21, 181, 32, 168, 56, 174, 87, 168, 108, 128, 157, 112)
 
-[node name="Floating_wall4" type="StaticBody2D" parent="."]
-position = Vector2(1571, 595)
-scale = Vector2(0.225796, 0.225796)
-collision_layer = 4
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Floating_wall4"]
-position = Vector2(-63.75, 0)
-scale = Vector2(1.22408, 1)
-texture = ExtResource("1_1l77t")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floating_wall4"]
-visible = false
-position = Vector2(-0.664612, 3.70066)
-scale = Vector2(0.998787, 0.985239)
-polygon = PackedVector2Array(189, 32, 152, 31, 91, 38, -1, 39, -94, 42, -261, 16, -378, -8, -312, 62, -255, 118, -205, 124, -201, 143, -106, 178, -64, 172, -55, 183, 5, 191, 21, 181, 32, 168, 56, 174, 87, 168, 108, 128, 157, 112)
-
-[node name="Floating_wall6" type="StaticBody2D" parent="."]
-position = Vector2(2154, -678)
-scale = Vector2(1.56904, 1.56904)
-collision_layer = 4
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Floating_wall6"]
-position = Vector2(-63.75, 0)
-scale = Vector2(1.22408, 1)
-texture = ExtResource("1_1l77t")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floating_wall6"]
-visible = false
-position = Vector2(-0.664612, 3.70066)
-scale = Vector2(0.998787, 0.985239)
-polygon = PackedVector2Array(189, 32, 152, 31, 91, 38, -1, 39, -94, 42, -261, 16, -378, -8, -312, 62, -255, 118, -205, 124, -201, 143, -106, 178, -64, 172, -55, 183, 5, 191, 21, 181, 32, 168, 56, 174, 87, 168, 108, 128, 157, 112)
-
-[node name="Floating_wall5" type="StaticBody2D" parent="."]
-position = Vector2(1626, -139)
-scale = Vector2(0.415757, 0.415757)
-collision_layer = 4
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Floating_wall5"]
-position = Vector2(-63.75, 0)
-scale = Vector2(1.22408, 1)
-texture = ExtResource("1_1l77t")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floating_wall5"]
-visible = false
-position = Vector2(-0.664612, 3.70066)
-scale = Vector2(0.998787, 0.985239)
-polygon = PackedVector2Array(189, 32, 152, 31, 91, 38, -1, 39, -94, 42, -261, 16, -378, -8, -312, 62, -255, 118, -205, 124, -201, 143, -106, 178, -64, 172, -55, 183, 5, 191, 21, 181, 32, 168, 56, 174, 87, 168, 108, 128, 157, 112)
-
 [node name="Floating_wall2" type="StaticBody2D" parent="."]
 position = Vector2(1429, 1647)
 scale = Vector2(0.47518, 0.47518)
-collision_layer = 4
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Floating_wall2"]
@@ -134,7 +65,6 @@ polygon = PackedVector2Array(189, 32, 152, 31, 91, 38, -1, 39, -94, 42, -261, 16
 [node name="Floating_wall3" type="StaticBody2D" parent="."]
 position = Vector2(2189, 1175)
 scale = Vector2(0.47518, 0.47518)
-collision_layer = 4
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Floating_wall3"]
@@ -150,16 +80,15 @@ polygon = PackedVector2Array(189, 32, 152, 31, 91, 38, -1, 39, -94, 42, -261, 16
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(1876, 1800)
-collision_mask = 14
 script = ExtResource("4_waey0")
 metadata/_edit_group_ = true
 
-[node name="PlayerSprite" type="Sprite2D" parent="CharacterBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 texture = ExtResource("3_vt6e5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 visible = false
-position = Vector2(3.5, 18.75)
+position = Vector2(7, 87)
 shape = SubResource("RectangleShape2D_t7lmk")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
@@ -171,19 +100,18 @@ position_smoothing_speed = 2.0
 
 [node name="Left_Wall" type="StaticBody2D" parent="."]
 position = Vector2(1030, 1804)
-collision_layer = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Left_Wall"]
 texture = ExtResource("6_l2p5j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Left_Wall"]
+visible = false
 position = Vector2(-7.5, -4.5)
 shape = SubResource("RectangleShape2D_l6c3h")
 
 [node name="Left_Wall2" type="StaticBody2D" parent="."]
 position = Vector2(998, 3290)
-collision_layer = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Left_Wall2"]
@@ -194,81 +122,32 @@ visible = false
 position = Vector2(-7.5, -4.5)
 shape = SubResource("RectangleShape2D_l6c3h")
 
-[node name="Left_Wall5" type="StaticBody2D" parent="."]
-position = Vector2(1025, -2630)
-collision_layer = 2
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Left_Wall5"]
-texture = ExtResource("6_l2p5j")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Left_Wall5"]
-position = Vector2(-7.5, -4.5)
-shape = SubResource("RectangleShape2D_l6c3h")
-
-[node name="Left_Wall4" type="StaticBody2D" parent="."]
-position = Vector2(1025, -1149)
-collision_layer = 2
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Left_Wall4"]
-texture = ExtResource("6_l2p5j")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Left_Wall4"]
-position = Vector2(-7.5, -4.5)
-shape = SubResource("RectangleShape2D_l6c3h")
-
 [node name="Left_Wall3" type="StaticBody2D" parent="."]
-position = Vector2(1029, 332)
-collision_layer = 2
+position = Vector2(1061, 318)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Left_Wall3"]
 texture = ExtResource("6_l2p5j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Left_Wall3"]
-position = Vector2(-7.5, -4.5)
-shape = SubResource("RectangleShape2D_l6c3h")
-
-[node name="Right_Wall5" type="StaticBody2D" parent="."]
-position = Vector2(2768, -2643)
-collision_layer = 2
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Right_Wall5"]
-texture = ExtResource("6_l2p5j")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Right_Wall5"]
-position = Vector2(-7.5, -4.5)
-shape = SubResource("RectangleShape2D_l6c3h")
-
-[node name="Right_Wall4" type="StaticBody2D" parent="."]
-position = Vector2(2763, -1172)
-collision_layer = 2
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Right_Wall4"]
-texture = ExtResource("6_l2p5j")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Right_Wall4"]
+visible = false
 position = Vector2(-7.5, -4.5)
 shape = SubResource("RectangleShape2D_l6c3h")
 
 [node name="Right_Wall2" type="StaticBody2D" parent="."]
-position = Vector2(2696, 297)
-collision_layer = 2
+position = Vector2(2723, 294)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Right_Wall2"]
 texture = ExtResource("6_l2p5j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Right_Wall2"]
+visible = false
 position = Vector2(-7.5, -4.5)
 shape = SubResource("RectangleShape2D_l6c3h")
 
 [node name="Right_Wall3" type="StaticBody2D" parent="."]
 position = Vector2(2660, 3291)
-collision_layer = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Right_Wall3"]
@@ -281,50 +160,23 @@ shape = SubResource("RectangleShape2D_l6c3h")
 
 [node name="Right_Wall" type="StaticBody2D" parent="."]
 position = Vector2(2691, 1800)
-collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Right_Wall"]
 texture = ExtResource("6_l2p5j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Right_Wall"]
+visible = false
 position = Vector2(-7.5, -4.5)
 shape = SubResource("RectangleShape2D_l6c3h")
 
-[node name="Space_Ship2" type="Area2D" parent="."]
-position = Vector2(2402, -266)
-collision_layer = 8
-script = ExtResource("7_ep23r")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Space_Ship2"]
-position = Vector2(1.00012, -2)
+[node name="Space_Ship" type="StaticBody2D" parent="."]
+position = Vector2(2374, 1347)
 scale = Vector2(0.205001, 0.205001)
-texture = ExtResource("7_u88ku")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Space_Ship2"]
-visible = false
-position = Vector2(1, -2)
-scale = Vector2(0.205001, 0.205001)
-polygon = PackedVector2Array(-141.463, 175.609, -321.95, 243.901, -326.828, 160.975, -321.95, 146.341, -126.829, -78.0483, -63.4141, -229.267, -9.75586, -248.779, 9.75586, -248.779, 63.4141, -229.267, 117.072, -87.8042, 131.707, -58.5361, 321.95, 160.975, 317.072, 248.78, 151.219, 180.487, 117.072, 185.365, 82.9268, 209.755, -78.0488, 209.755, -117.073, 185.365)
-
-[node name="Space_Ship" type="Area2D" parent="."]
-position = Vector2(1435, 927)
-collision_layer = 8
-script = ExtResource("7_ep23r")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Space_Ship"]
-position = Vector2(1.00012, -2)
-scale = Vector2(0.205001, 0.205001)
 texture = ExtResource("7_u88ku")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Space_Ship"]
 visible = false
-position = Vector2(1, -2)
-scale = Vector2(0.205001, 0.205001)
 polygon = PackedVector2Array(-141.463, 175.609, -321.95, 243.901, -326.828, 160.975, -321.95, 146.341, -126.829, -78.0483, -63.4141, -229.267, -9.75586, -248.779, 9.75586, -248.779, 63.4141, -229.267, 117.072, -87.8042, 131.707, -58.5361, 321.95, 160.975, 317.072, 248.78, 151.219, 180.487, 117.072, 185.365, 82.9268, 209.755, -78.0488, 209.755, -117.073, 185.365)
-
-[connection signal="body_entered" from="Space_Ship2" to="CharacterBody2D" method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="Space_Ship2" to="Space_Ship2" method="_on_body_entered"]
-[connection signal="body_entered" from="Space_Ship" to="CharacterBody2D" method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="Space_Ship" to="Space_Ship" method="_on_body_entered"]
